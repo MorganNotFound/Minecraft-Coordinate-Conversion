@@ -93,7 +93,7 @@ WindowsMediaPlayer1.Enabled = True
 WindowsMediaPlayer1.Visible = False
 ```
 使用时要将Minecraft.mp3与编写好的exe放在一起，很多人会觉得在工程里预览的时候音乐没有加载出来是程序或者音乐的问题，其实不然，仔细回看一下程序代码：App.Path表示程序位置，如果没有将mp3与工程放在一个文件夹里就不能加载出来，也就是说，用什么运行就要把音乐和什么放在一起。   
-如果要背景音乐循环播放，也很简单，只需添加上一下代码：
+如果要背景音乐循环播放，也很简单，只需添加上以下代码：
 ```
 Private Sub WindowsMediaPlayer1_PlayStateChange(ByVal NewState As Long)
 If NewState = 1 Then
